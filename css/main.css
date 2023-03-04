@@ -30,6 +30,7 @@ body {
 
 /* logo-style */
 .link-logo {
+  display: flex;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -253,22 +254,8 @@ body {
   background-color: var(--ofer-color);
 }
 
-.logo-footer,
-.logo-color-footer {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03;
-
-  font-style: normal;
-  color: var(--header-color);
-}
-.logo-color-footer {
-  color: var(--active-text-color);
-}
-
 .link-logo-footer {
+  display: flex;
   text-decoration: none;
   font-family: "Raleway";
   font-weight: 700;
@@ -277,9 +264,18 @@ body {
   color: var(--active-text-color);
 }
 
+.logo-footer {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  font-style: normal;
+  color: var(--header-color);
+}
+
 .footer-adress-list {
   list-style: none;
- }
+}
 
 .footer-adress-link {
   font-size: 14px;
@@ -293,6 +289,9 @@ body {
 /* контаки підвала */
 .adress-phone-link,
 .adress-mail-link {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
   color: var(--color-mail-phone-footer);
@@ -326,6 +325,19 @@ body {
 
 .folio-list-item {
   border: 1px solid var(--border-folio);
+}
+
+.folio-list-item-link {
+  text-decoration: none;
+  color: var(--body-color);
+  transition: color 0.2s linear;
+}
+
+/* активності посилань фоліо */
+.folio-list-item-link:hover,
+.folio-list-item-link:focus,
+.folio-list-item-link:active {
+  color: var(--active-text-color);
 }
 
 .folio-title-name {
