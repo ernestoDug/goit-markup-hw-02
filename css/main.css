@@ -59,13 +59,14 @@ body {
 /* контейнер шапки */
 .header-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--header-color);
-  align-items: center;
 }
 /* логотип */
 .link-logo {
   display: flex;
+  align-items: center;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -86,6 +87,7 @@ body {
 
 .navigation-list {
   display: flex;
+  margin-top: 0;
   margin-left: 93px;
   margin-bottom: 0;
   padding-left: 0;
@@ -103,6 +105,7 @@ body {
 }
 /* стилі контактів */
 .navigation-link {
+  display: block;
   text-decoration: none;
   color: inherit;
   padding-top: 30px;
@@ -113,6 +116,7 @@ body {
   display: flex;
   list-style: none;
   padding-top: 0;
+  margin-top: 0;
   padding-left: 0;
   margin-bottom: 0;
 }
@@ -209,6 +213,9 @@ body {
 }
 
 /*  переваги */
+.advantages-section {
+  padding-bottom: 0;
+}
 
 .advantages-list {
   display: flex;
@@ -310,7 +317,7 @@ body {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -324,13 +331,14 @@ body {
 
 /* підвальчик */
 .footer {
-  display: flex;
   background-color: var(--ofer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .link-logo-footer {
   display: flex;
-  margin-top: 60px;
+  margin-top: 0;
   margin-bottom: 20px;
   text-decoration: none;
   font-family: "Raleway";
@@ -366,7 +374,11 @@ body {
 }
 /* контаки підвала */
 .address {
-  margin-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.footer-adress-list > li:nth-child(-n + 2) {
+  margin-bottom: 9px;
 }
 
 .adress-phone-link,
@@ -386,7 +398,8 @@ body {
   list-style: none;
   padding-top: 0;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
+  margin-top: 0;
 }
 
 .filtre-button {
@@ -427,11 +440,16 @@ body {
   flex-basis: calc(100% / 3 - var(--card-gap));
   margin-left: var(--card-gap);
   margin-top: var(--card-gap);
-  border: 1px solid var(--border-folio);
+}
+
+.folio-list-item:nth-child(3n + 1) {
+  margin-left: 0;
 }
 
 .card-content {
-  padding: 20px;
+  padding: 30px;
+  border: 1px solid var(--border-folio);
+  border-top: none;
 }
 
 .folio-list-item-link {
@@ -444,6 +462,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  margin-bottom: 4px;
 }
 /* типи проектів в картках */
 .folio-title-result {
