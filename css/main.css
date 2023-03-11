@@ -451,11 +451,16 @@ body {
 }
 
 .card-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border: 1px solid var(--border-folio);
   border-top: none;
+}
+.folio-content
+{
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .folio-list-item-link {
