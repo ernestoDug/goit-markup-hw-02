@@ -437,7 +437,7 @@ body {
 }
 /*  стилі  для карток */
 .folio-list-item {
-  flex-basis: calc(100% / 3 - var(--card-gap));
+  flex-basis: calc(100% -2 * var(--card-gap)) / 3;
   margin-left: var(--card-gap);
   margin-top: var(--card-gap);
 }
@@ -446,8 +446,14 @@ body {
   margin-left: 0;
 }
 
+.folio-list-item:nth-child(-n + 3) {
+  margin-top: 0;
+}
+
 .card-content {
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   border: 1px solid var(--border-folio);
   border-top: none;
 }
