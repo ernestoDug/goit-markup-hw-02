@@ -52,11 +52,28 @@
         <!-- телефон та  пошта  -->
         <ul class="header-contacts-list">
           <li class="header-mail">
+            <a class="header-svg-link" href="#">
+              <svg class="header-svg" width="16" height="12">
+                <use xlink:href="images/sprite.svg#icon-envelope-16x12"></use>
+              </svg>
+            </a>
             <a class="navigation-link__mail" href="mailto:info@devstudio.com">
               info@devstudio.com</a
             >
           </li>
+
           <li class="header-phone">
+            <a class="header-svg-link" href="#">
+              <svg
+                class="header-svg"
+                width="10"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <use xlink:href="images/sprite.svg#icon-smartphone-10x16"></use>
+              </svg>
+            </a>
             <a class="navigation-link__phone" href="tel:+380961111111">
               +38 096 111 11 11</a
             >
@@ -278,33 +295,78 @@
     <footer class="footer">
       <div class="container footer-container">
         <!-- logo -->
-        <a class="link-logo-footer" href="#">
-          Web
-          <span class="logo-footer">Studio</span>
-        </a>
-        <address class="address">
-          <ul class="footer-adress-list">
-            <li>
-              <a
-                class="footer-adress-link"
-                href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >м. Київ, пр-т Лесі Украінки, 26</a
-              >
+        <div class="footer-logo-address">
+          <a class="link-logo-footer" href="#">
+            Web
+            <span class="logo-footer">Studio</span>
+          </a>
+          <address class="address">
+            <ul class="footer-adress-list">
+              <li class="adress-adress">
+                <a
+                  class="footer-adress-link"
+                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Украінки, 26</a
+                >
+              </li>
+              <li class="adress-mail">
+                <a class="adress-mail-link" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="adress-phone">
+                <a class="adress-phone-link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <!-- /footer-logo-address -->
+
+        <div class="associate-social">
+          <!-- вектори соц мереж футеру -->
+          <h3 class="footer-social-list-svg-title">приєднуйтесь</h3>
+
+          <ul class="footer-social-list-svg">
+            <!-- інста -->
+            <li class="footer-social-list-svg-item">
+              <a class="footer-list-svg-item-link" href="#">
+                <svg class="footer-list-svg-item-image" width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
             </li>
-            <li class="adress-mail">
-              <a class="adress-mail-link" href="mailto:info@devstudio.com">
-                info@devstudio.com</a
-              >
+
+            <!-- твітер -->
+            <li class="footer-social-list-svg-item">
+              <a class="footer-list-svg-item-link" href="#">
+                <svg class="footer-list-svg-item-image" width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-tw-44x44"></use>
+                </svg>
+              </a>
             </li>
-            <li class="adress-phone">
-              <a class="adress-phone-link" href="tel:+380961111111">
-                +38 096 111 11 11</a
-              >
+            <!-- фейсбук -->
+            <li class="footer-social-list-svg-item">
+              <a class="footer-list-svg-item-link" href="#">
+                <svg class="footer-list-svg-item-image" width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <!-- лінкен -->
+            <li class="footer-social-list-svg-item">
+              <a class="footer-list-svg-item-link" href="#">
+                <svg class="footer-list-svg-item-image" width="20" height="20">
+                  <use xlink:href="images/sprite.svg#icon-linke-44x44"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
+        <!-- /associate-social -->
       </div>
       <!-- /footer-container -->
     </footer>
