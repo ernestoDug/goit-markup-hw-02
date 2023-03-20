@@ -676,28 +676,6 @@ body {
   color: var(--header-color);
   padding: 63px 24px;
 }
-/* створимо анімацію */
-@keyframes for-modal {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  40% {
-    opacity: 0.3;
-  }
-
-  60% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /* стилі бекдропу */
 .backdrop-ofer {
@@ -714,7 +692,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1) rotate(0);
   width: 528px;
   height: 581px;
   opacity: 1;
@@ -723,15 +701,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* застосуємо анімацію */
-.modal {
-  animation-name: for-modal;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  rotate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 /* іконка закріття */
@@ -761,6 +733,13 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* стиль для анімації модального вікна який сам не допетрив */
+.backdrop-ofer.is-hidden .modal
+{
+  transform: scale(.1) rotate(45deg);
+  
 }
 
 /* стек ховерів та фокусів */
