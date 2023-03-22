@@ -98,6 +98,9 @@
       <!-- переваги -->
       <section class="section advantages-section">
         <div class="container advantages-container">
+          <h2 class="section__advantages-title hidden-custom">
+            Особливості студії
+          </h2>
           <ul class="advantages-list">
             <!-- section__advantages-item 1 -->
             <li class="advantages-list-item">
@@ -721,12 +724,109 @@
           </ul>
         </div>
         <!-- /associate-social -->
+
+        <!-- форма футера -->
+        <form name="subscribe" class="form-footer" method="post">
+          <label class="footer-subscribe">
+            Підпишіться на розсилку
+            <input
+              name="email"
+              class="footer-email-input"
+              type="email"
+              placeholder="E-mail"
+            />
+          </label>
+          <button class="footer-button-submit" type="submit">
+            Підписатися
+            <svg class="footer-button-icon" width="24" height="24">
+              <use xlink:href="images/icons.svg#icon-send24x24"></use>
+            </svg>
+          </button>
+        </form>
+        <!-- /form-footer -->
       </div>
       <!-- /footer-container -->
     </footer>
     <!-- бекдроп и модальне вікно -->
     <div data-modal class="backdrop-ofer is-hidden">
+   
       <div class="modal">
+        <!-- форма у вікні -->
+        <form class="feedback-form" name="feedback">
+          <strong class="form-title">
+            Залиште свої дані, ми вам передзвонимо
+          </strong>
+
+          <label class="label-modal" for="names"> Ім'я </label>
+          <div class="input-iner">
+            <input
+              class="input-modal"
+              required
+              id="names"
+              name="your-name"
+              type="text"
+            />
+            <svg class="input-svg-modal" width="18" height="18">
+              <use xlink:href="images/icons.svg#icon-name"></use>
+            </svg>
+          </div>
+          <!-- /input-iner -->
+
+          <label class="label-modal" for="phones"> Телефон </label>
+          <div class="input-iner">
+            <input
+              class="input-modal"
+              required
+              id="phones"
+              name="your-phone"
+              type="tel"
+            />
+            <svg class="input-svg-modal" width="18" height="18">
+              <use xlink:href="images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <!-- /input-iner -->
+
+          <label class="label-modal" for="emails"> Пошта </label>
+          <div class="input-iner">
+            <input
+              class="input-modal"
+              id="emails"
+              name="your-email"
+              type="email"
+            />
+            <svg class="input-svg-modal" width="18" height="18">
+              <use xlink:href="images/icons.svg#icon-envelope"></use>
+            </svg>
+          </div>
+          <!-- /input-iner -->
+
+          <label class="label-modal" for="comments"> Коментар </label>
+          <textarea
+            class="input-text-area"
+            name="your-comment"
+            id="comments"
+            placeholder="Введіть текст"
+          ></textarea>
+          <!-- дів для сусідства+ -->
+          <div class="check-box-iner">
+            <!-- чекбокс -->
+            <input
+              class="input-check_bx hidden-custom"
+              required
+              id="check_bxs"
+              name="your-check_bx"
+              type="checkbox"
+            />
+            <label class="label-check_bx" for="check_bxs">
+              Погоджуюся з розсилкою та приймаю &nbsp;
+              <a href="#"> Умови договору</a>
+            </label>
+          </div>
+          <!-- check-box-ine -->
+
+          <button class="footer-button-submit" type="submit">Відправити</button>
+        </form>
         <button data-modal-close type="button" class="btn-closed">
           <svg class="btn-closed-svg" width="18" height="18">
             <use xlink:href="images/sprite.svg#icon-closed"></use>
