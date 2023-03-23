@@ -17,7 +17,7 @@
   --color-shadov-card-third: rgba(0, 0, 0, 0.2);
   --color-foot: #2f303a;
   --color-bg-social-footer: rgba(255, 255, 255, 0.1);
-  --color-border-footer-form:  rgba(255, 255, 255, 0.3);
+  --color-border-footer-form: rgba(255, 255, 255, 0.3);
   --color-mail-phone-footer: rgba(255, 255, 255, 0.6);
   --color-placeholder: rgba(117, 117, 117, 0.5);
   --color-bg-special: rgba(47, 48, 58, 0.8);
@@ -461,6 +461,7 @@ body {
 .footer-container {
   display: flex;
   align-items: baseline;
+  position: relative;
 }
 
 .link-logo-footer {
@@ -569,17 +570,16 @@ body {
 }
 
 /* ФОРМА ПІДПИСКИ ФУТЕРА*/
-.form-footer
-{
+.form-footer {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: space-between;
   margin-left: 93px;
+  position: absolute;
+  right: 0;
 }
 
-
-.footer-email-input
-{
+.footer-email-input {
   width: 358px;
   border-radius: 4px;
   padding-top: 15px;
@@ -587,33 +587,47 @@ body {
   padding-left: 16px;
   margin-right: 12px;
   border: 1px solid var(--color-border-footer-form);
-  box-shadow:  drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
   color: var(--header-color);
 }
-.footer-subscribe
-{
+.footer-subscribe {
   display: flex;
   flex-direction: column;
-justify-content: space-between;
-gap: 20px;
-    font-weight: 700;
-font-size: 14px;
-line-height: 1.1;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color:var(--header-color)
+  justify-content: space-between;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--header-color);
 }
 
 /* пофарбуємо плейсхолдер */
-.footer-email-input::placeholder
-{
-color:var(--color-mail-phone-footer);
+.footer-email-input::placeholder {
+  color: var(--color-mail-phone-footer);
 }
 
+.footer-button-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 10px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  background-color: var(--active-text-color);
+  color: var(--header-color);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.footer-button-submit
-{
+.modal-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -623,41 +637,36 @@ color:var(--color-mail-phone-footer);
   border-radius: 4px;
   cursor: pointer;
   border: none;
-    font-weight: 700;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   background-color: var(--active-text-color);
   color: var(--header-color);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* пофарбуємо іконку кнопки */
-.footer-button-icon
-{
+.footer-button-icon {
   fill: var(--header-color);
   margin-left: 10px;
 }
 
 /* анімація іконки кнопки*/
 
-@keyframes subs
-{
-from{
-transform: rotate(0);
-
+@keyframes subs {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-135deg);
+    fill: var(--social-stroke);
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
+  }
 }
-to
-{
- transform: rotate(-135deg);
-fill: var(--social-stroke);
-stroke: var(--border-color);
-stroke-width: 1.5px;
-}
-}
-.footer-button-submit:hover .footer-button-icon
-{
-  animation:  subs 1s forwards;
+.footer-button-submit:hover .footer-button-icon {
+  animation: subs 1s forwards;
 }
 
 /* портфоліо */
@@ -818,56 +827,49 @@ stroke-width: 1.5px;
 }
 
 /* форма у вікні */
-.feedback-form
-{
+.feedback-form {
   display: flex;
   flex-direction: column;
 }
 /* заголовок форми */
-.form-title
-{
+.form-title {
   margin-bottom: 12px;
- font-weight: 700;
-font-size: 20px;
-line-height: 1.2;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--body-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--body-color);
 }
 
 /* стиллі для лайблов */
-.label-modal
-{
-   font-weight: 400;
+.label-modal {
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
-   letter-spacing: 0.01em;
-    color: var(--sub-title-text-color)
- }
+  letter-spacing: 0.01em;
+  color: var(--sub-title-text-color);
+}
 /* 
 стилі для обгортки інпута для позиціїї свджи */
-.input-iner
-{
+.input-iner {
   position: relative;
   margin-top: 4px;
   margin-bottom: 10px;
-
 }
 
 /* стилі полів введення та іх іконок */
- .input-modal
- {
-    width: 100%;
+.input-modal {
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-padding-left: 42px;
-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  /* іконки інпут */
- .input-svg-modal
- {
+/* іконки інпут */
+.input-svg-modal {
   fill: var(--body-color);
   display: block;
   position: absolute;
@@ -875,40 +877,43 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   left: 12px;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
+}
 
- /* поле коментаря стиль */
- .input-text-area
- {
+/* поле коментаря стиль */
+.input-text-area {
   margin-top: 4px;
   width: 100%;
   min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-padding: 12px 16px;
-resize: none;
-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
- }
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
- .input-text-area::placeholder {
-font-size: 12px;
-line-height: 1.2;
-letter-spacing: 0.01em;
-color: var(--color-placeholder);
- }
+.input-text-area::placeholder {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--color-placeholder);
+}
 /* чекбокс
 кастомний */
- .label-check_bx
- {
-display: flex;
-align-items: center;
-margin-top: 20px;
-margin-bottom: 30px;
- }
+.label-check_bx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7x;
+  letter-spacing: 0.03em;
+  color: var(--sub-title-text-color);
+}
 
- .label-check_bx::before
- {
-  content:"";
+.label-check_bx::before {
+  content: "";
   display: flex;
   align-items: center;
   width: 16px;
@@ -916,13 +921,16 @@ margin-bottom: 30px;
   border: 1px solid var(--body-color);
   cursor: pointer;
   margin-right: 7px;
- }
- .input-check_bx:checked +  .label-check_bx::before
- {
-   background-image: url('../images/icon-check.svg');
-   border: none;
- }
+}
+.input-check_bx:checked + .label-check_bx::before {
+  background-image: url("../images/icon-check.svg");
+  border: none;
+}
 
+/* уовми довогору  */
+.label-chbx-link {
+  color: var(--active-text-color);
+}
 
 /* іконка закріття */
 .btn-closed {
@@ -944,6 +952,7 @@ margin-bottom: 30px;
 
 .btn-closed-svg {
   fill: var(--color-logo-black);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* стилі класу від джаСкрипта */
@@ -956,7 +965,6 @@ margin-bottom: 30px;
 /* стиль для анімації модального вікна який сам не допетрив */
 .backdrop-ofer.is-hidden .modal {
   transform: scale(0.1) rotate(45deg);
-
 }
 /* стек ховерів та фокусів */
 /* ХОВЕРИ ШАПКИ */
@@ -995,14 +1003,16 @@ margin-bottom: 30px;
 .button:hover,
 .button:focus,
 .footer-button-submit:hover,
-.footer-button-submit:focus
-
+.footer-button-submit:focus, 
+.modal-btn:focus,
+.modal-btn:hover
 {
   background-color: var(--color-hover);
   color: var(--header-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
+}
 
+/* ховери фільтру */
 .filtre-button:hover,
 .filtre-button:focus {
   background-color: var(--color-hover);
@@ -1010,10 +1020,15 @@ margin-bottom: 30px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.btn-closed:hover .btn-closed-svg {
+  fill: var(--color-hover);
+}
+
 /* ХОВЕРИ СОЦМЕРЕЖ карток */
 
-.comand-list-svg-item-link:hover  .advantages-list-svg-item-image,
-.comand-list-svg-item-link:focus  .advantages-list-svg-item-image {
+.comand-list-svg-item-link:hover .advantages-list-svg-item-image,
+.comand-list-svg-item-link:focus .advantages-list-svg-item-image {
   fill: var(--header-color);
 }
 .comand-list-svg-item-link:hover,
@@ -1046,19 +1061,26 @@ margin-bottom: 30px;
 /* фокуси форм */
 /* фокуси інпутів та іконок в них */
 .input-modal:focus,
- .input-text-area:focus,
- .footer-email-input:focus
- {
+.input-text-area:focus,
+.footer-email-input:focus,
+.input-modal:hover,
+.input-text-area:hover,
+.footer-email-input:hover {
   outline: none;
   border: 1px solid var(--active-text-color);
 }
 
-
- .input-modal:focus + .input-svg-modal
- {
+/* ХОВЕРИ ІКОНОК ФОРМИ */
+.input-modal:focus + .input-svg-modal {
   fill: var(--active-text-color);
- }
- .input-check_bx:focus + .label-check_bx::before
- {
-  outline: 1px solid var(--color-hover);
- }
+}
+.input-modal:hover + .input-svg-modal {
+  fill: var(--active-text-color);
+}
+/* ХОВЕРИ КАСТОМ ЧЕКБОКСУ */
+.input-check_bx:focus + .label-check_bx::before {
+  border: 1px solid var(--color-hover);
+}
+.input-check_bx:hover + .label-check_bx::before {
+  border: 1px solid var(--color-hover);
+}
