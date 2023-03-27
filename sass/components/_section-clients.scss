@@ -1,0 +1,50 @@
+/* постійні клієнти */
+.section-clients {
+  margin-bottom: 0;
+  &__title {
+    margin-bottom: 50px;
+    @include for-fonts(36px, 700, 1.2);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+/* список лого клієнтів */
+
+/* окремі лого клієнтів  */
+.clients-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+/* посилання  */
+.clients-list__link {
+  @include flex-center-center();
+  border: 1px solid var(--social-stroke);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+      border-color: var(--color-hover);
+  }
+}
+
+/* вектори  лого клієнтів */
+.clients-list__image {
+  fill: var(--social-stroke);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+   .clients-list__link:hover &,
+   .clients-list__link:focus &
+   {
+     fill: var(--color-hover);
+}
+}

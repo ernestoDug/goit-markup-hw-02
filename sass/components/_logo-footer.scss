@@ -1,0 +1,16 @@
+/* лого футер  */
+
+.footer__logo {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-family: "Raleway";
+  @include for-fonts(26px, 700, 1.2);
+  color: var(--active-text-color);
+}
+
+.logo__span--white {
+  @include for-fonts(26px, 700, 1.2);
+  color: var(--header-color);
+}

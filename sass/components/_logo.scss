@@ -1,0 +1,12 @@
+/* логотип */
+.logo {
+  display: flex;
+  align-items: center;
+  @include for-fonts(26px, 700, 1.2);
+  font-family: "Raleway";
+  text-decoration: none;
+  color: var(--active-text-color);
+  &__span {
+    color: var(--color-logo-black);
+  }
+}

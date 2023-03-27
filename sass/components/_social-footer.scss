@@ -1,0 +1,46 @@
+/* соцмережі футера */
+
+/* Приєднуйтесь */
+
+.social-wrapp {
+  margin-left: 70px;
+  margin-bottom: 0;
+  &__title {
+    @include for-fonts(14px, 700, 1.1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--header-color);
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.social-footer {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  list-style: none;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon {
+    fill: var(--header-color);
+  }
+
+  &__link {
+    @include flex-center-center();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-bg-social-footer);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* ховери векторів футера */
+    &:hover,
+    &:focus {
+      background-color: var(--color-hover);
+    }
+  }
+}

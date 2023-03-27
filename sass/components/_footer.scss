@@ -1,0 +1,48 @@
+/* підвальчик */
+.footer {
+  background-color: var(--color-foot);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__container {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+}
+// адреса
+.adress {
+  margin-bottom: 0;
+  &__list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  &__item:nth-child(-n + 2) {
+    margin-bottom: 9px;
+  }
+}
+.adress__link {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  font-style: normal;
+  color: var(--header-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--active-text-color);
+  }
+
+  &--footer {
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+    color: var(--color-mail-phone-footer);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+/* контаки підвала */

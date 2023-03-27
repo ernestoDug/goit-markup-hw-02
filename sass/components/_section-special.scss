@@ -1,0 +1,39 @@
+/* чим ми займаємося */
+
+.section-special__title {
+  margin-bottom: 50px;
+  @include for-fonts(36px, 700, 1.2);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.section-special__list {
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.special-list__item {
+  margin-right: 30px;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+/* текст поверх фото */
+.special-list__container {
+  @include flex-center-center();
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  background-color: var(--color-bg-special);
+}
+.special-container__title {
+  @include for-fonts(14px, 700, 1.1);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--header-color);
+}

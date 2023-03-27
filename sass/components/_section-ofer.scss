@@ -1,0 +1,49 @@
+/* Ефективні рішення для вашого бізнесу */
+.section-ofer {
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  background-color: var(--ofer-bg-color);
+  background-image: linear-gradient(
+      to right,
+      var(--ofer-color),
+      var(--ofer-color-finish-gradient)
+    ),
+    url(../images/bg-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1600px;
+  &__title {
+    width: 696px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+    @include for-fonts(44px, 900, 1.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--header-color);
+  }
+}
+
+/* кнопка */
+.button {
+  @include flex-center-center();
+  width: 216px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: var(--active-text-color);
+  color: var(--header-color);
+  cursor: pointer;
+  border: none;
+  @include for-fonts(16px, 700, 1.9);
+  padding: 10px 32px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ховери] */
+  &:hover,
+  &:focus {
+    background-color: var(--color-hover);
+    color: var(--header-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

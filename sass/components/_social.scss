@@ -1,0 +1,35 @@
+/* вектори соц-мереж карток */
+.social-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--color-hover);
+  }
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list__link {
+  @include flex-center-center();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list__icon {
+  fill: var(--social-stroke);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* ХОВЕРИ СОЦМЕРЕЖ карток */
+
+  .social-list__link:hover &,
+  .social-list__link:focus & {
+    fill: var(--header-color);
+  }
+}

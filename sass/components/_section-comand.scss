@@ -1,0 +1,51 @@
+/* наша команда */
+.section-comand {
+  background: var(--team-bg-color);
+  &__title {
+    margin-bottom: 50px;
+    @include for-fonts(36px, 700, 1.2);
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+/* карточки команди */
+.comand-list__item {
+  width: 270px;
+  margin-right: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px var(--color-shadov-card-first),
+    0px 1px 1px var(--color-shadov-card-sacond),
+    0px 2px 1px var(--color-shadov-card-third);
+  background-color: var(--header-color);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  //  імена та посади в команді
+}
+.comand-list__name {
+  @include for-fonts(16px, 500, 1.2);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.comand-list__post {
+  @include for-fonts(16px, 400, 1.2);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--sub-title-text-color);
+  margin-bottom: 16px;
+}
