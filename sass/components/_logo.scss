@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   @include for-fonts(26px, 700, 1.2);
-  font-family: "Raleway";
+  font-family: var(--font-sacond-raleway);
   text-decoration: none;
   color: var(--active-text-color);
   &__span {

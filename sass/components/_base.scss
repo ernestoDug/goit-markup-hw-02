@@ -16,7 +16,7 @@ img {
 }
 /* загальні стилі */
 body {
-  font-family: "roboto", sans-serif;
+  font-family: var(--font-first-roboto, var(--font-reserv));
   color: var(--body-color);
 }
 
