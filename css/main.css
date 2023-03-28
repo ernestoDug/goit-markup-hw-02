@@ -26,6 +26,9 @@
   --overlay-bg: rgba(33, 150, 243, 0.9);
   --color-border-btn-closed: rgba(0, 0, 0, 0.1);
   --card-gap: 30px;
+  --font-first-roboto: Roboto;
+  --font-sacond-raleway: Raleway;
+  --font-reserv: sans-serif;
 }
 
 /* для класу від джаСкрипта */
@@ -47,7 +50,7 @@ img {
 
 /* загальні стилі */
 body {
-  font-family: "roboto", sans-serif;
+  font-family: var(--font-first-roboto, var(--font-reserv));
   color: var(--body-color);
 }
 
@@ -137,7 +140,7 @@ body {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
-  font-family: "Raleway";
+  font-family: var(--font-sacond-raleway);
   text-decoration: none;
   color: var(--active-text-color);
 }
@@ -352,12 +355,10 @@ body {
   margin-bottom: 0;
   padding-left: 0;
 }
-.advantages-section__list__item {
+
+.advantages-section-list__item:not(:last-child) {
   width: 270px;
   margin-right: 30px;
-}
-.advantages-section__list__item:last-child {
-  margin-right: 0;
 }
 
 .advantages-section__subtitle {
@@ -598,6 +599,13 @@ body {
   fill: var(--color-hover);
 }
 
+labelspan {
+  color: #888;
+}
+label:focus-within span {
+  color: green;
+}
+
 /* підвальчик */
 .footer {
   background-color: var(--color-foot);
@@ -659,7 +667,7 @@ body {
   margin-top: 0;
   margin-bottom: 20px;
   text-decoration: none;
-  font-family: "Raleway";
+  font-family: var(--font-sacond-raleway);
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
@@ -943,7 +951,7 @@ body {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close__icon:hover {
+.modal-close:hover .modal-close__icon {
   fill: var(--active-text-color);
 }
 
