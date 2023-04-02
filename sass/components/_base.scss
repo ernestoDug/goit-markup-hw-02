@@ -8,28 +8,77 @@ h6,
 p {
   margin: 0;
 }
-
+// для РЕСПОНСИВНОГО ЗОБРАЖЕННЯ
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
 /* загальні стилі */
 body {
   font-family: var(--font-first-roboto, var(--font-reserv));
   color: var(--body-color);
+// анмація кнопки футера
+  @keyframes subs {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(-135deg);
+      fill: var(--social-stroke);
+      stroke: var(--border-color);
+      stroke-width: 1.5px;
+    }
+  }
+// анімаці команди
+  @keyframes com_sl {
+    from {
+      transform: translate(-40%);
+    }
+    50% {
+      color: var(--color-hover);
+      text-shadow: 5px 5px 5px var(--color-hover);
+    }
+    100% {
+      transform: translate(40%);
+      color: var(--color-hover);
+      text-shadow: 5px 5px 5px var(overlay-bg);
+    }
+  }
+
+  .card-content {
+    padding: 30px 15px;
+  }
 }
 
+// мобільні стилі <480px
 .container {
-  width: 1200px;
-  margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-top: 0;
 }
 
@@ -45,25 +94,14 @@ body {
   @include is-hidden();
 }
 
-/* анімація іконки кнопки*/
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 
-@keyframes subs {
-  from {
-    transform: rotate(0);
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
-  to {
-    transform: rotate(-135deg);
-    fill: var(--social-stroke);
-    stroke: var(--border-color);
-    stroke-width: 1.5px;
+  section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
-}
-
-.card-content {
-  padding: 30px 15px;
-}
-
-.card-thumb {
-  position: relative;
-  overflow: hidden;
 }

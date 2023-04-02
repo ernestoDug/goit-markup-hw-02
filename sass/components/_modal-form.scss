@@ -1,4 +1,5 @@
 /* форма у вікні */
+
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -91,9 +92,7 @@
   @include flex-center-center();
   margin-top: 20px;
   margin-bottom: 30px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7x;
+  @include for-fonts(12px, 400, 1.2);
   letter-spacing: 0.03em;
   color: var(--sub-title-text-color);
   cursor: pointer;
@@ -122,4 +121,12 @@
 /* уовми довогору  */
 .check-iner__link {
   color: var(--active-text-color);
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .check-iner__label {
+    font-size: 14px;
+    line-height: 1.7x;
+  }
 }

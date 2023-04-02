@@ -1,16 +1,48 @@
 /* лого футер  */
-
+.footer__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
 .footer__logo {
   display: flex;
-  margin-top: 0;
   margin-bottom: 20px;
+
   text-decoration: none;
   font-family: var(--font-sacond-raleway);
-  @include for-fonts(26px, 700, 1.2);
+  @include for-fonts(24px, 700, 1.2);
   color: var(--active-text-color);
 }
 
 .logo__span--white {
-  @include for-fonts(26px, 700, 1.2);
+  @include for-fonts(24px, 700, 1.2);
   color: var(--header-color);
+}
+
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+
+@media screen and (min-width: 768px) {
+  .footer__logo-wrap {
+    margin: 0;
+  }
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .footer__logo-wrap {
+    align-items: normal;
+  }
+
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+  .footer__logo {
+    font-size: 26px;
+    .logo__span--white {
+      font-size: 26px;
+    }
+  }
 }

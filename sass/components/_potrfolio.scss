@@ -1,48 +1,37 @@
 /*  стиллі списків для карток портфоліо  */
 
 .folio {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-gap));
-  margin-top: calc(-1 * var(--card-gap));
   padding: 0;
   margin: 0;
   list-style: none;
-  &__item {
-    flex-basis: calc(100% - 2 * var(--card-gap)) / 3;
-    margin-left: var(--card-gap);
-    margin-top: var(--card-gap);
-    &:nth-child(3n + 1) {
-      margin-left: 0;
-    }
-
-    &:nth-child(-n + 3) {
-      margin-top: 0;
-    }
-  }
-  /* назви проектів в картах */
-  &__name {
-    letter-spacing: 0.06em;
-    @include for-fonts(18px, 700, 2);
-
-    margin-bottom: 4px;
-  }
-  /* типи проектів в картках */
-  &__result {
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
-    color: var(--sub-title-text-color);
-  }
 }
+
+/*  стилі  для карток */
+.folio__item {
+  width: 450px;
+}
+
 /*  стилі  для карток */
 
 .folio__card-content {
   padding: 20px 24px;
-  border: 1px solid var(--border-folio);
+  outline: 1px solid var(--border-folio);
   border-top: none;
 }
-
+.folio__name {
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 4px;
+}
+/* типи проектів в картках */
+.folio__result {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: var(--sub-title-text-color);
+}
 .folio__link {
   /* щоб спрацював ховер блочимо */
   display: block;
@@ -58,5 +47,43 @@
   &:hover .overlay,
   &:focus .overlay {
     transform: translateY(0);
+  }
+}
+
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+@media screen and (min-width: 768px) {
+  /*  стиллі списків для карток портфоліо  */
+
+  .folio {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /*  стилі  для карток */
+  .folio__item {
+    width: 320px;
+  }
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .folio {
+    margin-left: calc(-1 * var(--card-gap));
+    margin-top: calc(-1 * var(--card-gap));
+  }
+
+  .folio__item {
+    flex-basis: calc(100% - 2 * var(--card-gap)) / 3;
+    margin-left: var(--card-gap);
+    margin-top: var(--card-gap);
+  }
+
+  .folio__item:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+
+  .folio__item:nth-child(-n + 3) {
+    margin-top: 0;
   }
 }

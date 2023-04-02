@@ -16,7 +16,7 @@
   left: 50%;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
-  width: 528px;
+  width: 450px;
   height: 581px;
   opacity: 1;
   visibility: visible;
@@ -31,7 +31,7 @@
     @include flex-center-center();
     width: 200px;
     margin: 0 auto;
-    padding: 10px 28px;
+    padding: 10px 52px;
     border-radius: 4px;
     cursor: pointer;
     border: none;
@@ -74,5 +74,15 @@
     .modal-close:hover & {
       fill: var(--active-text-color);
     }
+  }
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+  .modal__button {
+    padding: 10px 28px;
   }
 }

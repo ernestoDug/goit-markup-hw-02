@@ -1,5 +1,11 @@
 /* чим ми займаємося */
 
+@media screen and (max-width: 1199px) {
+  .section-special {
+    display: none;
+  }
+}
+
 .section-special__title {
   margin-bottom: 50px;
   @include for-fonts(36px, 700, 1.2);

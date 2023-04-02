@@ -1,18 +1,18 @@
 /* соцмережі футера */
 
 /* Приєднуйтесь */
-
 .social-wrapp {
-  margin-left: 70px;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
   &__title {
+    margin-bottom: 20px;
+
     @include for-fonts(14px, 700, 1.1);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--header-color);
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 20px;
   }
 }
 
@@ -20,7 +20,7 @@
   display: flex;
   padding: 0;
   margin-bottom: 0;
-  margin-top: 0;
+  margin: 0 auto;
   list-style: none;
 
   &__item:not(:last-child) {
@@ -42,5 +42,25 @@
     &:focus {
       background-color: var(--color-hover);
     }
+  }
+}
+
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+@media screen and (min-width: 768px) {
+  .social-wrapp {
+    margin-top: 0;
+  }
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .social-wrapp {
+    margin-left: 70px;
+    margin-bottom: 0;
+    display: block;
+  }
+  .social-wrapp__title {
+    margin-top: 0;
+    padding-top: 0;
   }
 }

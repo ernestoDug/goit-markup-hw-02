@@ -1,12 +1,24 @@
-/* логотип */
+/* логотип мобільний*/
+
 .logo {
   display: flex;
-  align-items: center;
-  @include for-fonts(26px, 700, 1.2);
+  @include for-fonts(24px, 700, 1.2);
   font-family: var(--font-sacond-raleway);
   text-decoration: none;
   color: var(--active-text-color);
   &__span {
     color: var(--color-logo-black);
+  }
+}
+
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+
+@media screen and (min-width: 768px) {
+}
+
+// ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
   }
 }
