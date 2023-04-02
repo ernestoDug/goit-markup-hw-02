@@ -74,11 +74,83 @@
             >
           </li>
         </ul>
+
+        <!--мобільний  бургер   -->
+        <button type="button" class="mobile-menu-burger" data-menu-open>
+          <svg class="mobile-menu-burger__icon" width="40" height="40">
+            <use xlink:href="images/sprite.svg#burger40x40"></use>
+          </svg>
+        </button>
       </div>
       <!-- /"container header-container" -->
-    </header>
 
-    <!-- main content -->
+      <!-- бургер меню -->
+
+      <div class="burger-menu" data-menu>
+        <div class="container burger-menu__container">
+          <button type="button" class="mobile-menu-close-btn" data-menu-close>
+            <svg class="mobile-menu-close-btn__icon" width="40" height="40">
+              <use xlink:href="images/sprite.svg#close-mobile18x18"></use>
+            </svg>
+          </button>
+          <!-- навігація бургера -->
+          <nav class="burger-menu__nav">
+            <ul class="burger-menu__menu">
+              <li class="burger-menu__item">
+                <a class="burger-menu__link active" href="#">Студія</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="portfolio.html">Портфоліо</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- телефон та  пошта бургера -->
+          <div class="contacts-social">
+            <ul class="burger-menu__contacts burger-contacts">
+              <li class="burger-contacts__item">
+                <a
+                  class="burger-contacts__link burger-contacts__link--blue"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="burger-contacts__item emailmob">
+                <a
+                  class="burger-contacts__link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <!-- соц мережі бургер вікна -->
+            <ul class="burger-social">
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Instagram</a>
+              </li>
+
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Twitter</a>
+              </li>
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Facebook</a>
+              </li>
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- contacts-sicial -->
+        </div>
+        <!-- burger-menu__container -->
+      </div>
+      <!-- burger-menu -->
+      <!-- ********************************** -->
+    </header>
     <main class="main">
       <!--  Ефективні рішення  -->
       <!-- section__ofer -->
@@ -97,7 +169,7 @@
 
       <!-- переваги -->
       <section class="section advantages-section">
-        <div class="container">
+        <div class="container advantages-section__container">
           <h2 class="advantages-section__title hidden">Особливості студії</h2>
           <ul class="advantages-section__list advantages-section-list">
             <!-- section__advantages-item 1 -->
@@ -178,7 +250,7 @@
               </div>
               <!-- /advantages-svg-image-thumb" -->
               <h3 class="advantages-section__subtitle">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p class="advantages-section__describe">
+              <p class="advantages-section__describe last">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
               </p>
@@ -196,11 +268,21 @@
           <ul class="section-special__list special-list">
             <!-- list-item 1 -->
             <li class="special-list__item">
-              <img
-                src="images/section_special/1.jpg"
-                alt="планшет та блок-схема на папірі"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    images/section_special/1-desk.jpg    1x,
+                    images/section_special/1-desk@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="images/section_special/01.jpg"
+                  alt="планшет та блок-схема на папірі"
+                  width="370"
+                />
+              </picture>
+
               <!-- написи на фото -->
               <div class="special-list__container special-container">
                 <p class="special-container__title">Десктопні додатки</p>
@@ -209,11 +291,21 @@
             </li>
             <!-- list-item 2 -->
             <li class="special-list__item">
-              <img
-                src="images/section_special/2.jpg"
-                alt="смартфон на екрані ноутбука"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    images/section_special/2-desk.jpg    1x,
+                    images/section_special/2-desk@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="images/section_special/02.jpg"
+                  alt="смартфон на екрані ноутбука"
+                  width="370"
+                />
+              </picture>
+
               <!-- написи на фото -->
               <div class="special-list__container special-container">
                 <p class="special-container__title">Мобільні додатки</p>
@@ -222,11 +314,20 @@
             </li>
             <!-- list-item 3 -->
             <li class="special-list__item">
-              <img
-                src="images/section_special/3.jpg"
-                alt="палітра кольорів на дісплее"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    images/section_special/3-desk.jpg    1x,
+                    images/section_special/3-desk@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="images/section_special/03.jpg"
+                  alt="палітра кольорів на дісплее"
+                  width="370"
+                />
+              </picture>
               <!-- написи на фото -->
               <div class="special-list__container special-container">
                 <p class="special-container__title">Дизайнерські рішення</p>
@@ -241,7 +342,7 @@
 
       <!-- наша команда -->
       <section class="section section-comand">
-        <div class="container">
+        <div class="container section-comand__container">
           <h2 class="section-comand__title">Наша команда</h2>
 
           <ul class="section-comand__list comand-list">
@@ -250,11 +351,36 @@
             <!-- comand-list-item 1  -->
             <li class="comand-list__item">
               <div class="card-thumb">
-                <img
-                  src="images/section_comand/1.jpg"
-                  alt="усміхнений бородатий чоловік в окулярах у темній сорочці"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      images/section_comand/1-desktop.jpg    1x,
+                      images/section_comand/1-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/1-tablet.jpg    1x,
+                      images/section_comand/1-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/1.jpg    1x,
+                      images/section_comand/1@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    src="images/section_comand/01.jpg"
+                    alt="усміхнений бородатий чоловік в окулярах у темній сорочці"
+                  />
+                </picture>
               </div>
               <!-- card-thumb -->
               <div class="card-content">
@@ -307,11 +433,36 @@
             <!-- comand-list-item 2  -->
             <li class="comand-list__item">
               <div class="card-thumb">
-                <img
-                  src="images/section_comand/2.jpg"
-                  alt="усміхнена блондинка у піджаку та окулярах"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      images/section_comand/2-desktop.jpg    1x,
+                      images/section_comand/2-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/2-tablet.jpg    1x,
+                      images/section_comand/2-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/2.jpg    1x,
+                      images/section_comand/2@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+
+                  <img
+                    src="images/section_comand/02.jpg"
+                    alt="усміхнена блондинка у піджаку та окулярах"
+                  />
+                </picture>
               </div>
               <!-- /card-thumb -->
               <div class="card-content">
@@ -364,11 +515,35 @@
             <!-- comand-list-item 3  -->
             <li class="comand-list__item">
               <div class="card-thumb">
-                <img
-                  src="images/section_comand/3.jpg"
-                  alt="усміхнений чоловік у синій сорочці"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      images/section_comand/3-desktop.jpg    1x,
+                      images/section_comand/3-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/3-tablet.jpg    1x,
+                      images/section_comand/3-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/3.jpg    1x,
+                      images/section_comand/3@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="images/section_comand/03.jpg"
+                    alt="усміхнений чоловік у синій сорочці"
+                  />
+                </picture>
               </div>
               <!-- /card-thumb -->
 
@@ -422,11 +597,35 @@
             <!-- comand-list-item 4  -->
             <li class="comand-list__item">
               <div class="card-thumb">
-                <img
-                  src="images/section_comand/4.jpg"
-                  alt="чоловік з бородою в окулярах і темній футболці"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      images/section_comand/4-desktop.jpg    1x,
+                      images/section_comand/4-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/4-tablet.jpg    1x,
+                      images/section_comand/4-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      images/section_comand/4.jpg    1x,
+                      images/section_comand/4@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="images/section_comand/04.jpg"
+                    alt="усміхнена блондинка у піджаку та окулярах"
+                  />
+                </picture>
               </div>
               <!-- /card-thumb -->
               <div class="card-content">
@@ -667,7 +866,6 @@
           </ul>
         </div>
         <!-- /associate-social -->
-
         <!-- форма футера -->
         <form name="subscribe" class="form-footer" method="post">
           <label class="form-footer__subscribe">
@@ -779,6 +977,7 @@
       <!-- "modal" -->
     </div>
     <!-- backdrop-ofer -->
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

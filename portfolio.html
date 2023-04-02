@@ -75,7 +75,81 @@
             >
           </li>
         </ul>
+
+        <!--мобільний  бургер   -->
+        <button type="button" class="mobile-menu-burger" data-menu-open>
+          <svg class="mobile-menu-burger__icon" width="40" height="40">
+            <use xlink:href="images/sprite.svg#burger40x40"></use>
+          </svg>
+        </button>
       </div>
+      <!-- /"container header-container" -->
+
+      <!-- бургер меню -->
+
+      <div class="burger-menu" data-menu>
+        <div class="container burger-menu__container">
+          <button type="button" class="mobile-menu-close-btn" data-menu-close>
+            <svg class="mobile-menu-close-btn__icon" width="40" height="40">
+              <use xlink:href="images/sprite.svg#close-mobile18x18"></use>
+            </svg>
+          </button>
+          <!-- навігація бургера -->
+          <nav class="burger-menu__nav">
+            <ul class="burger-menu__menu">
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="index.html">Студія</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link active" href="#">Портфоліо</a>
+              </li>
+              <li class="burger-menu__item">
+                <a class="burger-menu__link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- телефон та  пошта бургера -->
+          <div class="contacts-social">
+            <ul class="burger-menu__contacts burger-contacts">
+              <li class="burger-contacts__item">
+                <a
+                  class="burger-contacts__link burger-contacts__link--blue"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="burger-contacts__item emailmob">
+                <a
+                  class="burger-contacts__link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <!-- соц мережі бургер вікна -->
+            <ul class="burger-social">
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Instagram</a>
+              </li>
+
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Twitter</a>
+              </li>
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> Facebook</a>
+              </li>
+              <li class="burger-social__item">
+                <a class="burger-social__link" href=""> LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- contacts-sicial -->
+        </div>
+        <!-- burger-menu__container -->
+      </div>
+      <!-- burger-menu -->
       <!-- /"container header-container" -->
     </header>
 
@@ -108,11 +182,38 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/1.jpg"
-                    alt="чоловік і дві жінки на екрані монітора"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/1-desk.jpg    1x,
+                        images/section_filtr/1-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/1-tabl.jpg    1x,
+                        images/section_filtr/1-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/1.jpg    1x,
+                        images/section_filtr/1@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img
+                      src="images/section_filtr/01.jpg"
+                      alt="чоловік і дві жінки на екрані монітора"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -137,11 +238,37 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/2.jpg"
-                    alt="два баскетболісти"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/2-desk.jpg    1x,
+                        images/section_filtr/2-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/2-tabl.jpg    1x,
+                        images/section_filtr/2-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/2.jpg    1x,
+                        images/section_filtr/2@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="images/section_filtr/2.jpg"
+                      alt="два баскетболісти"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -164,14 +291,40 @@
             </li>
 
             <!-- 3          -->
-            <li class="folio__item">
+            <li class="folio__item" id="free">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/3.jpg"
-                    alt="логотип ресторану у вигляді риби"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/3-desk.jpg    1x,
+                        images/section_filtr/3-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/3-tabl.jpg    1x,
+                        images/section_filtr/3-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/3.jpg    1x,
+                        images/section_filtr/3@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="images/section_filtr/03.jpg"
+                      alt="логотип ресторану у вигляді риби"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -185,7 +338,7 @@
                 </div>
                 <!-- /card-thumb -->
 
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Ресторан Seafood</h2>
                   <p class="folio__result">Додаток</p>
                 </div>
@@ -197,12 +350,38 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/4.jpg"
-                    alt="навушники з дужкою
-                                        "
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/4-desk.jpg    1x,
+                        images/section_filtr/4-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/4-tabl.jpg    1x,
+                        images/section_filtr/4-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/4.jpg    1x,
+                        images/section_filtr/4@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="images/section_filtr/04.jpg"
+                      alt="навушники з дужкою
+                                                "
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -215,7 +394,7 @@
                   <!-- "/overlay -->
                 </div>
                 <!-- /card-thumb -->
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Проєкт Prime</h2>
                   <p class="folio__result">Маркетинг</p>
                 </div>
@@ -227,11 +406,38 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/5.jpg"
-                    alt="маленька та велика коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/5-desk.jpg    1x,
+                        images/section_filtr/5-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/5-tabl.jpg    1x,
+                        images/section_filtr/5-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/5.jpg    1x,
+                        images/section_filtr/5@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img
+                      src="images/section_filtr/05.jpg"
+                      alt="маленька та велика коробки"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -245,7 +451,7 @@
                 </div>
                 <!-- /card-thumb -->
 
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Проєкт Boxes</h2>
                   <p class="folio__result">Додаток</p>
                 </div>
@@ -257,11 +463,38 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/6.jpg"
-                    alt="монітор комп'ютера епл"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/6-desk.jpg    1x,
+                        images/section_filtr/6-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/6-tabl.jpg    1x,
+                        images/section_filtr/6-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/6.jpg    1x,
+                        images/section_filtr/6@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img
+                      src="images/section_filtr/06.jpg"
+                      alt="монітор комп'ютера епл"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -275,7 +508,7 @@
                 </div>
                 <!-- /card-thumb -->
 
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Inspiration has no Borders</h2>
                   <p class="folio__result">Веб-сайт</p>
                 </div>
@@ -287,11 +520,37 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/7.jpg"
-                    alt="книга з фотографіями жінок"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/7-desk.jpg    1x,
+                        images/section_filtr/7-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/7-tabl.jpg    1x,
+                        images/section_filtr/7-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/7.jpg    1x,
+                        images/section_filtr/7@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="images/section_filtr/07.jpg"
+                      alt="книга з фотографіями жінок"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -304,7 +563,7 @@
                   <!-- "/overlay -->
                 </div>
                 <!-- /card-thumb -->
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Видання Limited Edition</h2>
                   <p class="folio__result">Дизайн</p>
                 </div>
@@ -316,11 +575,38 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/8.jpg"
-                    alt="бірочка на мотузці"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/8-desk.jpg    1x,
+                        images/section_filtr/8-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/8-tabl.jpg    1x,
+                        images/section_filtr/8-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/8.jpg    1x,
+                        images/section_filtr/8@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img
+                      src="images/section_filtr/08.jpg"
+                      alt="бірочка на мотузці"
+                      width="370"
+                    />
+                  </picture>
+
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -334,7 +620,7 @@
                 </div>
                 <!-- /card-thumb -->
 
-                <div class="card-content folio-content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Проєкт LAB</h2>
                   <p class="folio__result">Маркетинг</p>
                 </div>
@@ -346,11 +632,37 @@
             <li class="folio__item">
               <a href="#" class="folio__link">
                 <div class="card-thumb">
-                  <img
-                    src="images/section_filtr/9.jpg"
-                    alt="руки на клавіатурі"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        images/section_filtr/9-desk.jpg    1x,
+                        images/section_filtr/9-desk@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/9-tabl.jpg    1x,
+                        images/section_filtr/9-tabl@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        images/section_filtr/9.jpg    1x,
+                        images/section_filtr/9@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+
+                    <img
+                      src="images/section_filtr/09.jpg"
+                      alt="руки на клавіатурі"
+                      width="370"
+                    />
+                  </picture>
                   <!-- оверлей -->
                   <div class="overlay">
                     <p class="overlay__describe">
@@ -364,7 +676,7 @@
                 </div>
                 <!-- /card-thumb -->
 
-                <div class="card-content folio__content">
+                <div class="card-content folio__card-content">
                   <h2 class="folio__name">Growing Business</h2>
                   <p class="folio__result">Додаток</p>
                 </div>
@@ -483,5 +795,7 @@
       </div>
       <!-- /footer-container -->
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
