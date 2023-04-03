@@ -16,6 +16,8 @@ img {
 }
 
 .card-thumb {
+  display: flex;
+justify-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -51,9 +53,7 @@ body {
     }
   }
 
-  .card-content {
-    padding: 30px 15px;
-  }
+ 
 }
 
 // мобільні стилі <480px
