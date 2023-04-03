@@ -49,6 +49,12 @@ img {
 }
 
 .card-thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -115,9 +121,6 @@ body {
     color: var(--color-hover);
     text-shadow: 5px 5px 5px var(overlay-bg);
   }
-}
-body .card-content {
-  padding: 30px 15px;
 }
 
 .container {
@@ -742,6 +745,10 @@ body .card-content {
 }
 
 /* наша команда */
+.card-content {
+  padding: 30px 15px;
+}
+
 .section-comand {
   margin-right: auto;
   margin-left: auto;
@@ -1765,14 +1772,22 @@ body .card-content {
 }
 /*  стиллі списків для карток портфоліо  */
 .folio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
-  margin: 0;
+  margin: -30px -30px;
   list-style: none;
 }
 
 /*  стилі  для карток */
 .folio__item {
-  width: 450px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  margin-top: 0;
+  width: calc(100% - 30px);
 }
 
 /*  стилі  для карток */
@@ -1783,7 +1798,6 @@ body .card-content {
 }
 
 .folio__name {
-  letter-spacing: 0.06em;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1819,6 +1833,11 @@ body .card-content {
           transform: translateY(0);
 }
 
+@media screen and (max-width: 767px) {
+  .folio__card-content {
+    padding: 20px 50px;
+  }
+}
 @media screen and (min-width: 768px) {
   /*  стиллі списків для карток портфоліо  */
   .folio {
@@ -1834,25 +1853,32 @@ body .card-content {
   }
   /*  стилі  для карток */
   .folio__item {
-    width: 320px;
+    width: calc(50% - 60px);
+  }
+  .folio__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .folio__item:nth-child(2n+1) {
+    margin-left: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .folio {
-    margin-left: calc(-1 * var(--card-gap));
-    margin-top: calc(-1 * var(--card-gap));
+    margin: 0;
+    padding: 0;
+  }
+  .folio__card-content {
+    padding: 20px;
   }
   .folio__item {
-    -ms-flex-preferred-size: calc(100% - 2 * var(--card-gap))/3;
-        flex-basis: calc(100% - 2 * var(--card-gap))/3;
-    margin-left: var(--card-gap);
-    margin-top: var(--card-gap);
+    margin: 0;
+    width: calc(33% - 60px);
   }
-  .folio__item:nth-child(3n+1) {
+  .folio__item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .folio__item:nth-child(2n+1) {
     margin-left: 0;
-  }
-  .folio__item:nth-child(-n+3) {
-    margin-top: 0;
   }
 }
 /* * стилі оврелею */
