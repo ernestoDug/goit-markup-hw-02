@@ -1734,12 +1734,12 @@ body {
     width: 290px;
     height: 609px;
     overflow-y: auto;
-    top: 35%;
+    top: 40%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    top: 35%;
+    top: 40%;
     width: 450px;
   }
 }
