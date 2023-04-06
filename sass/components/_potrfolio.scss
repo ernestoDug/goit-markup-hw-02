@@ -1,20 +1,12 @@
 /*  стиллі списків для карток портфоліо  */
-
-.folio {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: -30px -30px;
-  list-style: none;
+.folio-burger {
+  position: absolute;
+  z-index: 2;
 }
-
-
-/*  стилі  для карток */
-.folio__item {
-  margin-bottom: 30px;
-  margin-right: 30px;
-  margin-top: 0;
-  width: calc(100% - 30px);
+.folio {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 /*  стилі  для карток */
@@ -25,7 +17,6 @@
   border-top: none;
 }
 .folio__name {
- 
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -35,12 +26,12 @@
 .folio__result {
   font-size: 16px;
   line-height: 1.9;
-  letter-spacing: 0.03em;
   color: var(--sub-title-text-color);
 }
+
 .folio__link {
   /* щоб спрацював ховер блочимо */
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: var(--body-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,63 +47,58 @@
   }
 }
 @media screen and (max-width: 767px) {
-.folio__card-content {
-  padding: 20px 50px;
-}
-}
-
+  .folio__card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px;
+  }
+} //@media screen and (max-width: 767px) {
 
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   /*  стиллі списків для карток портфоліо  */
 
   .folio {
     display: flex;
-    gap: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
   }
-
 
   /*  стилі  для карток */
   .folio__item {
-    width: calc(50% - 60px);
+    margin: 15px;
   }
-.folio__item:nth-child(2n)
-{
-  margin-right: 30px;
-}
-.folio__item:nth-child(2n+1)
-{
-margin-left: 30px;
-}
-}
-
-
+  .folio__item {
+    width: calc(50% - 30px);
+  }
+} // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
-  .folio
-  {
-      margin: 0;
-      padding: 0;
+  .folio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-gap));
+    margin-top: calc(-1 * var(--card-gap));
+    padding: 0;
+    margin: 0;
   }
-  .folio__card-content {
-    padding: 20px;
-  }
+  /*  стилі  для карток */
   .folio__item {
-          margin: 0;
-    width: calc(33% - 60px);
-        }
+    flex-basis: calc(100% - 2 * var(--card-gap)) / 3;
+    margin-left: var(--card-gap);
+    margin-top: var(--card-gap);
+  }
 
-        .folio__item:nth-child(2n)
-{
-  margin-right: 0;
-}
-.folio__item:nth-child(2n+1)
-{
-margin-left: 0;
-}
-}
-    
+  .folio__item:nth-child(3n + 1) {
+    margin-left: 0;
+  }
 
+  .folio__item:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+}
+
+/* * стилі оврелею */

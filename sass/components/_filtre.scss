@@ -43,6 +43,7 @@
   .filtre {
     display: flex;
     justify-content: center;
+    padding-top: 60px;
     &__item {
       flex-basis: calc ((100 % - 4 * 8px) / 5);
     }
@@ -52,6 +53,7 @@
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
   .filtre {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
+    padding-top: 0;
   }
 }

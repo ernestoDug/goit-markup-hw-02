@@ -3,9 +3,9 @@
 /* Приєднуйтесь */
 .social-wrapp {
   display: flex;
+  margin-top: 60px;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
   &__title {
     margin-bottom: 20px;
 
@@ -36,7 +36,7 @@
     height: 44px;
     border-radius: 50%;
     background: var(--color-bg-social-footer);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
     /* ховери векторів футера */
     &:hover,
     &:focus {
@@ -46,8 +46,9 @@
 }
 
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .social-wrapp {
+    text-align: center;
     margin-top: 0;
   }
 }
@@ -57,7 +58,6 @@
   .social-wrapp {
     margin-left: 70px;
     margin-bottom: 0;
-    display: block;
   }
   .social-wrapp__title {
     margin-top: 0;

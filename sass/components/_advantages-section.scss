@@ -1,6 +1,7 @@
 /*  переваги */
 .advantages-section {
   padding-bottom: 0;
+  margin-bottom: 60px;
 }
 /* іконки переваг */
 // мобілки
@@ -18,12 +19,10 @@
 .advantages-section__list {
   list-style: none;
 
-  margin: 0 auto;
   padding-left: 0;
 }
 
 .advantages-section__subtitle {
-  text-align: center;
   margin-bottom: 10px;
   @include for-fonts(14px, 700, 1.1);
   text-transform: uppercase;
@@ -41,8 +40,15 @@
 .last {
   margin-bottom: 0;
 }
-// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
-@media screen and (min-width: 768px) {
+// 480 480 480 480 480 480 480 480 480 480 480 480
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .advantages-section__subtitle {
+    text-align: center;
+  }
+}
+
+// / ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages-section__container {
     margin-left: 0;
     margin-right: 0;

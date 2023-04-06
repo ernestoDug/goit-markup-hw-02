@@ -1,9 +1,31 @@
 /* наша команда */
 
+// 360 360 360  360 360 360  360 360 360  360 360 360
+@media screen and (max-width: 479px) {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 290px;
+  }
+  .comand-list__item {
+    min-width: 270px;
+    margin-right: 0;
+  }
+}
+
+.card-content {
+  padding: 30px 15px;
+}
+
+// 480 480 480 480 480
+@media screen and (min-width: 480px) {
+  .section-comand__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .section-comand {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 60px;
   background: var(--team-bg-color);
   &__title {
     margin-bottom: 30px;
@@ -23,14 +45,12 @@
 
 /* карточки команди */
 .comand-list__item {
-  width: 450px;
-  margin-right: 30px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px var(--color-shadov-card-first),
     0px 1px 1px var(--color-shadov-card-sacond),
     0px 2px 1px var(--color-shadov-card-third);
   background-color: var(--header-color);
-  overflow: auto;
+  overflow: hidden;
 
   &:last-child {
     margin-right: 0;

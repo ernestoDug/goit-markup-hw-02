@@ -1,9 +1,11 @@
-/* Ефективні рішення для вашого бізнесу */
+/* Ефективні рішення для вашого бізнесу 
+
+*/
 .section-ofer {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  max-width: 1600px;
+  margin-top: 16px;
 
   background-color: var(--ofer-bg-color);
   background-image: linear-gradient(
@@ -11,15 +13,13 @@
       var(--ofer-color),
       var(--ofer-color-finish-gradient)
     ),
-    url(../images/bg-image.jpg);
+    url(../images/bg-image-mob320.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   &__title {
-    width: 360px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
     @include for-fonts(26px, 900, 1.6);
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -31,7 +31,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section-ofer {
-    background-image: url("../images/bg-image@2x.jpg");
+    background-image: url("../images/bg-image-mob320@2x.jpg");
   }
 }
 
@@ -57,20 +57,93 @@
   }
 }
 
-// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
+  .section-ofer__title {
+    width: 290px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+// @media screen and (max-width: 479px)
+
+// ********************************************
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .section-ofer {
+    background-image: url("../images/bg-image-mob.jpg");
+    max-width: 767px;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+  .section-ofer__title {
+    margin-bottom: 20px;
+    width: 360px;
+  }
+} // 480  480 480 480 480 480 480 480
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-ofer {
+    background-image: url("../images/bg-image-mob@2x.jpg");
+  }
 }
 
+// ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section-ofer {
+    background-image: url("../images/bg-image-tablet.jpg");
+    max-width: 1199;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+
+  .section-ofer__title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 360px;
+    text-align: center;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-ofer {
+    background-image: url("../images/bg-image-tablet@2x.jpg");
+  }
+}
+// @media screen and (min-width: 768px) and (max-width: 1199px)
+
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
   .section-ofer {
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url("../images/bg-image-desk.jpg");
     &__title {
+      animation-name: com_sl2;
+      animation-iteration-count: infinite;
+      animation-duration: 15s;
+      animation-fill-mode: none;
+      animation-direction: alternate;
       width: 696px;
+      margin: 0 auto;
+      margin-bottom: 30px;
       font-size: 44px;
+      text-align: center;
     }
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-ofer {
+      background-image: url("../images/bg-image-desk@2x.jpg");
+    }
+  }
+
   .button {
     width: 216px;
     padding-right: 32px;

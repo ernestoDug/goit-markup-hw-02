@@ -25,24 +25,22 @@
 @media screen and (min-width: 768px) {
   .footer__logo-wrap {
     margin: 0;
+    text-align: center;
   }
 }
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
   .footer__logo-wrap {
-    align-items: normal;
+    margin-top: 0;
   }
 
-  .footer__container {
-    display: flex;
-    align-items: baseline;
-    position: relative;
-  }
   .footer__logo {
+    align-self: flex-start;
+
     font-size: 26px;
-    .logo__span--white {
-      font-size: 26px;
-    }
+  }
+  .logo__span--white {
+    font-size: 26px;
   }
 }

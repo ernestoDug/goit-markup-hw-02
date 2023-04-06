@@ -11,6 +11,11 @@
   @include for-fonts(36px, 700, 1.2);
   text-align: center;
   letter-spacing: 0.03em;
+  animation-name: com_sl;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-fill-mode: none;
+  animation-direction: alternate;
 }
 
 .section-special__list {

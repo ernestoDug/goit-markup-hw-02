@@ -16,16 +16,17 @@ img {
 }
 
 .card-thumb {
-  display: flex;
-justify-content: center;
+  min-width: 290px;
+  max-width: 450px;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 /* загальні стилі */
 body {
   font-family: var(--font-first-roboto, var(--font-reserv));
   color: var(--body-color);
-// анмація кнопки футера
+  // анмація кнопки футера
   @keyframes subs {
     from {
       transform: rotate(0);
@@ -37,23 +38,34 @@ body {
       stroke-width: 1.5px;
     }
   }
-// анімаці команди
+  // анімаці команди
   @keyframes com_sl {
     from {
-      transform: translate(-40%);
+      color: var(--body-color);
     }
     50% {
       color: var(--color-hover);
       text-shadow: 5px 5px 5px var(--color-hover);
     }
     100% {
-      transform: translate(40%);
       color: var(--color-hover);
       text-shadow: 5px 5px 5px var(overlay-bg);
     }
   }
 
- 
+  @keyframes com_sl2 {
+    from {
+      color: var(--header-color);
+    }
+    50% {
+      color: var(--color-hover);
+      text-shadow: 5px 5px 5px var(--header-color);
+    }
+    100% {
+      color: var(--color-hover);
+      text-shadow: 5px 5px 5px var(--header-color);
+    }
+  }
 }
 
 // мобільні стилі <480px
@@ -62,18 +74,6 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
 }
 
 .section {
@@ -94,6 +94,17 @@ body {
   @include is-hidden();
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 
 @media screen and (min-width: 1200px) {

@@ -123,6 +123,14 @@
   color: var(--active-text-color);
 }
 
+// 360 360 360  360 360 360  360 360 360  360 360 360
+@media screen and (max-width: 479px) {
+  .check-iner__label {
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+}
+
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
   .check-iner__label {
