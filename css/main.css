@@ -1734,19 +1734,19 @@ body {
     width: 290px;
     height: 609px;
     overflow-y: auto;
-    top: 40%;
+    top: 50%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    top: 40%;
+    top: 50%;
     width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    top: 40%;
+    top: 50%;
   }
   .modal__button {
     padding: 10px 28px;
