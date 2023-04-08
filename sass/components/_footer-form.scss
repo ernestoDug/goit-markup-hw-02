@@ -123,19 +123,25 @@
 // @media screen and (min-width: 768px) and (max-width: 1199) {
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
-@media screen and (min-width: 1199px) and (max-width: 1600px) {
+@media screen and (min-width: 1199px) {
   .form-footer {
-    flex-wrap: nowrap;
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
-    margin-left: 93px;
+    flex-wrap: nowrap;
     margin-top: 0;
   }
   .form-footer__input {
     width: 358px;
     margin-top: 20px;
+    margin-right: 12px;
   }
   .button--footer {
     margin-top: 0;
+  }
+  .form-footer__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

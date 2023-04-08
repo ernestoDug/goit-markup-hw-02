@@ -72,16 +72,18 @@
   .footer {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
+    }
 
-  /* підвальчик */
+      /* підвальчик */
   .footer__container {
+    width: 1200px;
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+      align-items: baseline;
   }
   .adress__list {
     text-align: left;
     display: flex;
-    flex-wrap: wrap;
-  }
+    flex-flow: column wrap;
+    }
 } // @media screen and (min-width: 1200px)

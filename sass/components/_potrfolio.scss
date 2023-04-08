@@ -4,7 +4,6 @@
   z-index: 2;
 }
 .folio {
-  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -21,12 +20,14 @@
   font-size: 18px;
   line-height: 2;
   margin-bottom: 4px;
+  letter-spacing: 0.06em;
 }
 /* типи проектів в картках */
 .folio__result {
   font-size: 16px;
   line-height: 1.9;
   color: var(--sub-title-text-color);
+  letter-spacing: 0.03em;
 }
 
 .folio__link {
@@ -54,24 +55,62 @@
   }
 } //@media screen and (max-width: 767px) {
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .folio__item {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .folio__card-content--grey {
+    padding: 20px 24px;
+  }
+}
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   /*  стиллі списків для карток портфоліо  */
 
   .folio {
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
   }
 
   /*  стилі  для карток */
   .folio__item {
-    margin: 15px;
+    margin-right: 0;
+    margin-top: 30px;
+    width: 354px;
+    border: 1px solid #eeeeee;
   }
-  .folio__item {
-    width: calc(50% - 30px);
+
+  .folio__link {
+    display: flex;
+    flex-direction: column;
+  }
+  .folio__link > .card-thumb {
+    flex-grow: 1;
+  }
+  .folio__card-content {
+    padding: 20px 24px;
+  }
+
+  .folio__name {
+    letter-spacing: 0.06;
+  }
+
+  .folio__item:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+  .folio__item:nth-child(1),
+  .folio__item:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .folio__card-content--grey {
+    padding: 20px 24px;
+
+    height: 146px;
   }
 } // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 
@@ -79,17 +118,17 @@
 @media screen and (min-width: 1200px) {
   .folio {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-gap));
-    margin-top: calc(-1 * var(--card-gap));
     padding: 0;
     margin: 0;
   }
   /*  стилі  для карток */
   .folio__item {
-    flex-basis: calc(100% - 2 * var(--card-gap)) / 3;
-    margin-left: var(--card-gap);
-    margin-top: var(--card-gap);
+    width: 370px;
+    margin: 0;
+    margin-top: 30px;
   }
 
   .folio__item:nth-child(3n + 1) {
@@ -99,6 +138,12 @@
   .folio__item:nth-child(-n + 3) {
     margin-top: 0;
   }
-}
-
-/* * стилі оврелею */
+  .folio__item:nth-child(7),
+  .folio__item:nth-child(8),
+  .folio__item:nth-child(9) {
+    margin-bottom: 0;
+  }
+  .folio__name {
+    letter-spacing: 0.06em;
+  }
+} // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП

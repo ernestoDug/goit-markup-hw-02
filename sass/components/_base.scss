@@ -16,103 +16,138 @@ img {
 }
 
 .card-thumb {
-  min-width: 290px;
-  max-width: 450px;
+  width: auto;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
 }
 /* загальні стилі */
 body {
   font-family: var(--font-first-roboto, var(--font-reserv));
   color: var(--body-color);
-  // анмація кнопки футера
-  @keyframes subs {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(-135deg);
-      fill: var(--social-stroke);
-      stroke: var(--border-color);
-      stroke-width: 1.5px;
-    }
-  }
-  // анімаці команди
-  @keyframes com_sl {
-    from {
-      color: var(--body-color);
-    }
-    50% {
-      color: var(--color-hover);
-      text-shadow: 5px 5px 5px var(--color-hover);
-    }
-    100% {
-      color: var(--color-hover);
-      text-shadow: 5px 5px 5px var(overlay-bg);
-    }
-  }
+}
 
-  @keyframes com_sl2 {
-    from {
-      color: var(--header-color);
-    }
-    50% {
-      color: var(--color-hover);
-      text-shadow: 5px 5px 5px var(--header-color);
-    }
-    100% {
-      color: var(--color-hover);
-      text-shadow: 5px 5px 5px var(--header-color);
-    }
+// анмація кнопки футера
+@keyframes subs {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-135deg);
+    fill: var(--social-stroke);
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
+  }
+}
+// анімаці команди
+@keyframes com_sl {
+  from {
+    color: var(--body-color);
+  }
+  50% {
+    color: var(--color-hover);
+    text-shadow: 5px 5px 5px var(--color-hover);
+  }
+  100% {
+    color: var(--color-hover);
+    text-shadow: 5px 5px 5px var(overlay-bg);
   }
 }
 
-// мобільні стилі <480px
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+@keyframes com_sl2 {
+  from {
+    color: var(--header-color);
+  }
+  50% {
+    color: var(--color-hover);
+    text-shadow: 5px 5px 5px var(--header-color);
+  }
+  100% {
+    color: var(--color-hover);
+    text-shadow: 5px 5px 5px var(--header-color);
+  }
 }
 
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-top: 0;
-}
-
-.advantages-section {
-  padding-bottom: 0;
-}
-
-.hidden {
-  @include hidden();
-}
-
-.is-hidden {
-  @include is-hidden();
-}
-
-@media screen and (min-width: 480px) {
+// мобільні стилі <480px // 480 480 480 480 480 480 480 480 480 480 480 480
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
-    width: 480px;
+    min-width: 320px;
+    max-width: 479px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
   }
-}
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
+  }
+} // мобільні стилі <480px // 480 480 480 480 480 480 480 480 480 480 480 480
 
-@media screen and (min-width: 768px) {
+//  480 480 480 480   ***  767 767 767
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
-    width: 768px;
+    max-width: 767px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
   }
-}
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
+  }
+} ///480 480 480 480   ***  767 767 767
+
+// ***  767 767 767 ********************************1199 px
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 1199px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
+  }
+} // ***  767 767 767 ****************1199 px
+
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   section {
     padding-top: 94px;
     padding-bottom: 94px;
+    margin-top: 0;
   }
+} // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*  переваги */
+.hidden {
+  /* ховаємо заголовки */
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

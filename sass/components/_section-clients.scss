@@ -1,25 +1,5 @@
 /* постійні клієнти */
 
-// 360 360 360  360 360 360  360 360 360  360 360 360
-@media screen and (max-width: 479px) {
-  .section-clients__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .clients-list__item {
-    margin-bottom: 15px;
-  }
-
-  .advantages-section__subtitle {
-    text-align: center;
-  }
-}
-
-
-
 .section-clients {
   margin-bottom: 0;
 
@@ -63,6 +43,27 @@
 }
 
 
+
+
+// 360 360 360  360 360 360  360 360 360  360 360 360
+@media screen and (max-width: 479px) {
+  .section-clients__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .section-clients__title {
+    margin-bottom: 30px;
+  }
+  .clients-list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+ 
+}// 360 360 360  ************************479
+
+
 // *****************************
 // 480 480480480480480480480480v480480480480 480
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -86,34 +87,48 @@
   .advantages-section__subtitle {
     align-items: center;
   }
-}
-
-// **********************************************480
+}// 480 480480480480480480480480v480480480480 480*****************767
 
 
 
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-
-  .clients-list {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: -15px -15px;
+  
+   .clients-list {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: center;
     margin-top: 30px;
-
+    margin-right: -15px;
   }
-
+  
   .clients-list__item {
-    width: calc(33.333% - 30px);
-  }
-
-  .clients-list__item+.clients-list__item {
-    margin-bottom: 15px;
-  }
+    margin-bottom: 0;
+    width: 230px;
+    margin-right: 15px;
+    margin-left: 0;
+    margin-top: 30px;
+      }
+      .clients-list__item:nth-child(3),
+      .clients-list__item:nth-child(6)
+      {
+      margin-right: 0;
+}
+.clients-list__item:nth-child(4),
+.clients-list__item:nth-child(5),
+.clients-list__item:nth-child(6)
+{
+margin-bottom: 0;
 }
 
+.clients-list__item:nth-child(3),
+.clients-list__item:nth-child(2),
+.clients-list__item:nth-child(1)
+{
+margin-top: 0;
+}
+}
+   
 // @media screen and (min-width: 768px) and (max-width: 1199px) 
 
 

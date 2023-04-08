@@ -6,7 +6,7 @@
 
   &__title {
     margin-bottom: 12px;
-    @include for-fonts(20px, 700, 1.2);
+     @include for-fonts(16px, 700, 1.2);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--body-color);
@@ -92,7 +92,6 @@
   @include flex-center-center();
   margin-top: 20px;
   margin-bottom: 30px;
-  @include for-fonts(12px, 400, 1.2);
   letter-spacing: 0.03em;
   color: var(--sub-title-text-color);
   cursor: pointer;
@@ -123,13 +122,44 @@
   color: var(--active-text-color);
 }
 
-// 360 360 360  360 360 360  360 360 360  360 360 360
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>1199
 @media screen and (max-width: 479px) {
-  .check-iner__label {
-    margin-top: 3px;
-    margin-bottom: 10px;
+  .check-iner__label,
+  .check-iner__link {
+    @include for-fonts(10px, 400, 1.2);
+    }
+  .check-iner__label
+  {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+  .check-iner__link {
+    display: inline-block;
   }
 }
+  
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>1199
+@media screen   and ( min-width: 480px) and ( max-width: 1199px) {
+.check-iner__label {
+  @include for-fonts(12px, 400, 1.2);
+  letter-spacing: 0.03em;
+}
+}// @media screen   and ( min-width: 480px) and ( max-width: 1199px) {
+
+
+@media screen   and ( min-width: 480px) and (max-width: 1199px) {
+  .modal-form__title {
+
+@include for-fonts(20px, 700, 1.2);
+
+}
+}
+// }@media screen   and ( min-width: 480px) and (max-width: 1199px) {
+
+
+
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {

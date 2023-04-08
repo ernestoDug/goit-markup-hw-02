@@ -1,29 +1,13 @@
 /* наша команда */
-
-// 360 360 360  360 360 360  360 360 360  360 360 360
-@media screen and (max-width: 479px) {
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 290px;
-  }
-  .comand-list__item {
-    min-width: 270px;
-    margin-right: 0;
-  }
-}
+// alllllllllllllllll
 
 .card-content {
-  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  
+  padding-top: 30px;
 }
 
-// 480 480 480 480 480
-@media screen and (min-width: 480px) {
-  .section-comand__container {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 .section-comand {
   background: var(--team-bg-color);
@@ -52,11 +36,7 @@
   background-color: var(--header-color);
   overflow: hidden;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  //  імена та посади в команді
+   //  імена та посади в команді
 }
 .comand-list__name {
   @include for-fonts(16px, 500, 1.2);
@@ -74,8 +54,44 @@
   margin-bottom: 16px;
 }
 
+// @media screen and (max-width: 479px) 
+@media screen and (max-width: 479px) {
+  .card-thumb {
+ display: flex;
+ flex-direction: column;
+justify-content: center;
+
+ }
+
+  .card-content {
+       min-width: 290px;
+  }
+  }// }@media screen and (max-width: 479px) 
+
+
+
+// 480 480 480 480 480
+@media screen and (min-width: 320px) and (max-width: 767px){
+
+  .comand-list
+  {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+  }
+  .comand-list__item:not(:last-child)
+  {
+   margin-bottom: 30px;
+  }
+  }
+
+
+
+
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 @media screen and (min-width: 768px) {
+     
+    
   .section-comand__list {
     display: flex;
     flex-wrap: wrap;
@@ -98,7 +114,13 @@
 
   // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
   @media screen and (min-width: 1200px) {
+    .card-content {
+      padding-left: 32px;
+        padding-right: 32px;
+    }
     .section-comand {
+      display: flex;
+      justify-content: center;
       margin-top: 0;
       &__title {
         margin-bottom: 50px;

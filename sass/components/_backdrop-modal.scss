@@ -79,17 +79,20 @@
 // 360 360 360  360 360 360  360 360 360  360 360 360
 @media screen and (max-width: 479px) {
   .modal {
-    width: 290px;
+    position: fixed;
+    width: 320px;
     height: 609px;
     overflow-y: auto;
-    top: 50%;
+    top: 40%;
+    padding: 10px;
+    padding-top: 40px;
   }
 }
 
 // 768-1199 768-1199 768-1199 768-1199 768-1199768-1199
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    top: 50%;
+    top: 40%;
     width: 450px;
   }
 }

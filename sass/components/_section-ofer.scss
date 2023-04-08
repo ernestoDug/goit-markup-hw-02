@@ -3,9 +3,6 @@
 */
 .section-ofer {
   margin: 0 auto;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  margin-top: 16px;
 
   background-color: var(--ofer-bg-color);
   background-image: linear-gradient(
@@ -20,8 +17,6 @@
   &__title {
     margin: 0 auto;
     text-align: center;
-    @include for-fonts(26px, 900, 1.6);
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--header-color);
   }
@@ -31,7 +26,12 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section-ofer {
-    background-image: url("../images/bg-image-mob320@2x.jpg");
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-mob320@2x.jpg");
   }
 }
 
@@ -57,41 +57,71 @@
   }
 }
 
-@media screen and (max-width: 479px) {
+// 320**************************479
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .section-ofer__title {
     width: 290px;
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 30px;
+    @include for-fonts(20px, 900, 1.6);
   }
-}
-// @media screen and (max-width: 479px)
+  .section-ofer {
+    max-width: 479px;
+    padding-bottom: 118px;
+    padding-top: 118px;
+    margin: 0 auto;
+  }
+} // @media screen and (max-width: 479px)
 
 // ********************************************
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .section-ofer__title {
+    @include for-fonts(26px, 900, 1.6);
+
+    letter-spacing: 0.06em;
+  }
   .section-ofer {
-    background-image: url("../images/bg-image-mob.jpg");
+    background-color: var(--ofer-bg-color);
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-mob.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     max-width: 767px;
     padding-bottom: 118px;
     padding-top: 118px;
     margin: 0 auto;
   }
   .section-ofer__title {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 360px;
   }
-} // 480  480 480 480 480 480 480 480
+} // @media screen and (min-width: 480px) and (max-width: 767px) {
+
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section-ofer {
-    background-image: url("../images/bg-image-mob@2x.jpg");
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-mob@2x.jpg");
   }
 }
 
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .section-ofer {
-    background-image: url("../images/bg-image-tablet.jpg");
+    background-image: linear-gradient(
+      to right,
+      var(--ofer-color),
+      var(--ofer-color-finish-gradient)
+    ), url("../images/bg-image-tablet.jpg");
     max-width: 1199;
     padding-bottom: 118px;
     padding-top: 118px;
@@ -103,25 +133,34 @@
     margin-bottom: 30px;
     width: 360px;
     text-align: center;
+    font-size: 26px;
   }
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .section-ofer {
-    background-image: url("../images/bg-image-tablet@2x.jpg");
+    background-image: linear-gradient(
+      to right,
+      var(--ofer-color),
+      var(--ofer-color-finish-gradient)
+    ), url("../images/bg-image-tablet@2x.jpg");
   }
 }
 // @media screen and (min-width: 768px) and (max-width: 1199px)
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .section-ofer {
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
     margin: 0 auto;
-    background-image: url("../images/bg-image-desk.jpg");
+    background-image: linear-gradient(
+        to right,
+        var(--ofer-color),
+        var(--ofer-color-finish-gradient)
+      ),
+      url("../images/bg-image-desk.jpg");
     &__title {
       animation-name: com_sl2;
       animation-iteration-count: infinite;
@@ -140,7 +179,12 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .section-ofer {
-      background-image: url("../images/bg-image-desk@2x.jpg");
+      background-image: linear-gradient(
+          to right,
+          var(--ofer-color),
+          var(--ofer-color-finish-gradient)
+        ),
+        url("../images/bg-image-desk@2x.jpg");
     }
   }
 
