@@ -9,7 +9,7 @@ line-height: 0;
     padding: 0;
     width: 40px;
     height: 40px;
-     &__icon {
+      &__icon {
       fill: var(--color-logo-black);
       line-height: 0;
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,14 +22,15 @@ line-height: 0;
     
   // контейнер бургер
   .burger-menu__container {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     padding-left: 40px;
+    gap: 150px;
     overflow: hidden;
-    gap: 200px;
- 
+    margin-bottom: 0;
+
   }
 
  
@@ -41,13 +42,12 @@ line-height: 0;
   // мобільне віkно
   .burger-menu {
           position: fixed;
-      overflow: hidden;
-    z-index: 2;
+             overflow: hidden;
+           z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
 height: 100vh;
-    overflow: hidden;
    background-color: var(--header-color);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,10 +57,13 @@ height: 100vh;
       visibility: hidden;
       pointer-events: auto;
     }
-  
+    
     //  студія портфоліо контакти
     &__nav {
       margin-top: 48px;
+      flex-grow: 1;
+      margin-bottom: 30px;
+
     }
   
     &__item:not(:last-child) {
@@ -71,7 +74,7 @@ height: 100vh;
       // кольори для студія портфоліо контакти
       color: var(--body-color);
       text-decoration: none;
-      @include for-fonts(30px, 500, 1.2);
+      @include for-fonts(40px, 500, 1.2);
     }
   }
    
@@ -129,7 +132,7 @@ height: 100vh;
   }
   .burger-contacts__link--blue {
     display: block;
-    @include for-fonts(24px, 500, 1.2);
+    @include for-fonts(34px, 500, 1.2);
     color: var(--active-text-color);
     margin-bottom: 32px;
   }
@@ -150,33 +153,37 @@ height: 100vh;
 
   // ********************479
   @media screen and (max-width: 479px) {
+    .burger-menu__container
+    {
+      gap: 60px;
+      }
        .burger-social {
       display: flex;
       flex-direction: column;
-
-      font-size: 24px;
-      text-transform: uppercase;
-      padding-right: 100px;
-    
-   
+             }
+       .burger-social__item:not(:last-child)
+      {
+      margin-bottom: 10px;
+              
     }
+
+    .burger-social__item
+    {
+   text-transform: uppercase;
+    padding-right: 100px;
+
+    }
+       .burger-contacts__link--blue {
+      @include for-fonts(30px, 500, 1.2);
+         }
       }  // *******405
 
+
+     
   //****************480*767
   @media screen and (min-width: 480px) and (max-width: 767px)
   {
-      .burger-menu__link
-      {
-        
-            @include for-fonts(40px, 500, 1.2);
-       
-            .burger-contacts__link--blue
-        {
-          @include for-fonts(34px, 500, 1.2);
-        }
-    }
-    
-
+      
   .burger-social__item:not(:last-child) {
     border-right: 1px solid var(--body-color);
     margin-right: 10px;
