@@ -82,17 +82,16 @@
     margin-top: 30px;
     width: 354px;
     border: 1px solid #eeeeee;
-  }
+    }
 
   .folio__link {
     display: flex;
     flex-direction: column;
-  }
-  .folio__link > .card-thumb {
-    flex-grow: 1;
-  }
+    height: 100%;
+   }
   .folio__card-content {
     padding: 20px 24px;
+    flex-grow: 1;
   }
 
   .folio__name {
@@ -107,16 +106,13 @@
     margin-top: 0;
   }
 
-  .folio__card-content--grey {
-    padding: 20px 24px;
-
-    height: 146px;
-  }
+  
 } // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
-  .folio {
+
+    .folio {
     display: flex;
     justify-content: space-between;
     flex-direction: row;

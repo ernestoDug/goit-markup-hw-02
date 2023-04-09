@@ -17,7 +17,10 @@ img {
 
 .card-thumb {
   width: auto;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+align-items: center;  
+position: relative;
   overflow: hidden;
 }
 /* загальні стилі */
@@ -66,42 +69,40 @@ body {
     text-shadow: 5px 5px 5px var(--header-color);
   }
 }
-
+.container {
+  margin: 0 auto;
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 0;
+}
 // мобільні стилі <480px // 480 480 480 480 480 480 480 480 480 480 480 480
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
-    min-width: 320px;
-    max-width: 479px;
-    margin: 0 auto;
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
   }
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-top: 0;
-  }
+  
 } // мобільні стилі <480px // 480 480 480 480 480 480 480 480 480 480 480 480
 
 //  480 480 480 480   ***  767 767 767
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
-    max-width: 767px;
+    width: 480px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
+
   }
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-top: 0;
-  }
+  
 } ///480 480 480 480   ***  767 767 767
 
 // ***  767 767 767 ********************************1199 px
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
-    max-width: 1199px;
+    width: 768px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;

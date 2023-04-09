@@ -127,15 +127,9 @@
 @media screen and (max-width: 479px) {
   .check-iner__label,
   .check-iner__link {
-    @include for-fonts(10px, 400, 1.2);
-    }
-  .check-iner__label
-  {
-    display: inline-flex;
-    justify-content: space-between;
-  }
-  .check-iner__link {
-    display: inline-block;
+    @include for-fonts(8px, 400, 1.2);
+     display: inline-flex;
+    justify-content: center;
   }
 }
   

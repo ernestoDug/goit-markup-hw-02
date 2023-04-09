@@ -60,10 +60,13 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages-section {
     margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+ 
   }
   .advantages-section-list {
     margin: -15px -15px;
-  }
+   }
   .advantages-section-list__item {
     margin: 15px;
     width: calc(50% - 30px);
