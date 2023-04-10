@@ -7,16 +7,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 16px;
     padding-bottom: 16px;
     background-color: var(--header-color);
-  }
+ }
 }
-
 
 // медіа тільки під запити мобілок
 @media screen and (max-width: 767px) {
-  
+.header
+{
+ padding-top: 16px;
+}
+
+  .head-nav
+  {
+    align-self: flex-end;
+  }
+
+
   .menu,
   .contacts,
   .menu {
