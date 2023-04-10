@@ -153,17 +153,16 @@ body {
   margin: 0 auto;
 }
 
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-top: 0;
-}
-
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+  }
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -172,6 +171,11 @@ body {
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
+  }
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -263,12 +267,18 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 16px;
   padding-bottom: 16px;
   background-color: var(--header-color);
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+    padding-top: 16px;
+  }
+  .head-nav {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
   .menu,
   .contacts,
   .menu {
@@ -1415,6 +1425,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .social-wrapp {
+    display: block;
     margin-left: 70px;
     margin-bottom: 0;
     margin-top: 0;
@@ -1983,6 +1994,11 @@ body {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .filtre {
+    width: 326px;
+  }
+}
 @media screen and (min-width: 768px) {
   .filtre {
     display: -webkit-box;
@@ -2246,7 +2262,7 @@ body {
           justify-content: space-between;
   position: relative;
   padding-left: 40px;
-  gap: 140px;
+  gap: 60px;
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -2278,7 +2294,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .burger-menu__item:not(:last-child) {
   margin-bottom: 20px;
@@ -2366,8 +2382,17 @@ body {
 }
 
 @media screen and (max-width: 479px) {
+  .burger-menu__nav {
+    margin-bottom: 20px;
+  }
+  .burger-contacts__link--blue {
+    font-size: 25px;
+  }
+  .burger-menu__link {
+    font-size: 30px;
+  }
   .burger-menu__container {
-    gap: 60px;
+    gap: 30px;
   }
   .burger-social {
     display: -webkit-box;
@@ -2380,6 +2405,9 @@ body {
   }
   .burger-social__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .burger-social__link {
+    font-size: 16px;
   }
   .burger-social__item {
     text-transform: uppercase;
