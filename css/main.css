@@ -1628,10 +1628,11 @@ body {
 .modal {
   position: absolute;
   left: 50%;
+  top: 50%;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1) rotate(0);
           transform: translate(-50%, -50%) scale(1) rotate(0);
-  height: 581px;
+  height: 560px;
   opacity: 1;
   visibility: visible;
   background-color: var(--header-color);
@@ -1719,26 +1720,27 @@ body {
     position: fixed;
     margin: 0;
     width: 290px;
-    height: 609px;
+    height: 99vh;
     overflow-y: auto;
-    top: 45%;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-bottom: 0;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
-    top: 45%;
     width: 450px;
     padding: 40px;
+    height: 560px;
+  }
+  .check-iner__label {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    top: 50%;
     padding: 40px;
   }
   .modal__button {
@@ -1815,7 +1817,7 @@ body {
 .modal-form__text-area {
   margin-top: 4px;
   width: 100%;
-  min-height: 120px;
+  height: 150px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
@@ -1878,7 +1880,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 20px;
-  margin-bottom: 30px;
   letter-spacing: 0.03em;
   color: var(--sub-title-text-color);
   cursor: pointer;
@@ -1927,6 +1928,12 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .modal-form__text-area {
+    height: 90px;
+  }
+  .check-iner {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .check-iner__label {
@@ -1935,6 +1942,9 @@ body {
     line-height: 1.2;
     letter-spacing: 0.03em;
   }
+  .check-iner {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal-form__title {
@@ -1942,11 +1952,20 @@ body {
     font-weight: 700;
     line-height: 1.2;
   }
+  .modal-form__text-area {
+    height: 120px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .check-iner__label {
     font-size: 14px;
     line-height: 1.7x;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .modal__button {
+    margin-top: 0;
   }
 }
 /* портфоліо */
