@@ -59,7 +59,7 @@
   &__text-area {
     margin-top: 4px;
     width: 100%;
-    min-height: 120px;
+    height: 150px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
@@ -91,7 +91,6 @@
 .check-iner__label {
   @include flex-center-center();
   margin-top: 20px;
-  margin-bottom: 30px;
   letter-spacing: 0.03em;
   color: var(--sub-title-text-color);
   cursor: pointer;
@@ -131,6 +130,14 @@
      display: inline-flex;
     justify-content: center;
   }
+  .modal-form__text-area
+  {
+    height: 90px;
+  }
+  .check-iner
+{
+  margin-bottom: 20px;
+}
 }
   
 
@@ -139,6 +146,10 @@
 .check-iner__label {
   @include for-fonts(12px, 400, 1.2);
   letter-spacing: 0.03em;
+}
+.check-iner
+{
+  margin-bottom: 20px;
 }
 }// @media screen   and ( min-width: 480px) and ( max-width: 1199px) {
 
@@ -149,6 +160,10 @@
 @include for-fonts(20px, 700, 1.2);
 
 }
+.modal-form__text-area
+  {
+    height: 120px;
+  }
 }
 // }@media screen   and ( min-width: 480px) and (max-width: 1199px) {
 
@@ -160,5 +175,12 @@
   .check-iner__label {
     font-size: 14px;
     line-height: 1.7x;
-  }
+        margin: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+          }
+        
+          .modal__button {
+           margin-top: 0;
+}
 }

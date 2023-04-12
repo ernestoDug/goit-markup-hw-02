@@ -9,37 +9,28 @@
     justify-content: space-between;
     padding-bottom: 16px;
     background-color: var(--header-color);
- }
+  }
 }
 
 // медіа тільки під запити мобілок
 @media screen and (max-width: 767px) {
-.header
-{
- padding-top: 16px;
-}
-
-  .head-nav
-  {
-    align-self: flex-end;
+  .header {
+    padding-top: 16px;
   }
 
+  .head-nav {
+    align-self: flex-end;
+  }
 
   .menu,
   .contacts,
   .menu {
     display: none;
   }
-  
-}///@media screen and (max-width: 767px)
-
-
-
-
+} ///@media screen and (max-width: 767px)
 
 // ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ
 @media screen and (min-width: 768px) {
- 
   .mobile-menu-burger,
   .burger-menu {
     display: none;
@@ -51,8 +42,6 @@
   .head-nav {
     @include flex-center-center;
   }
-
-
 
   /* стилі навігації */
 
@@ -144,7 +133,7 @@
   .email {
     margin-right: 0;
   }
-}// // @media screen and (min-width: 768px) {
+} // // @media screen and (min-width: 768px) {
 
 // ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП ДЕСКТОП
 @media screen and (min-width: 1200px) {
